@@ -15,17 +15,12 @@ function divide(number1, number2) {
   return number1 / number2;
 }
 
-function updateDisplay() {
-  const display = document.querySelector('.calculator-results');
-    display.value = calculator.displayValue;
-}
-
-updateDisplay();
-
 // User interface logic:
 
 $(document).ready(function () {
+  console.log("Script executing!")
   $("form#add").submit(function (event) {
+    console.log("Submit form successfully reached.");
     event.preventDefault();
     const number1 = parseInt($("#add1").val());
     const number2 = parseInt($("#add2").val());
